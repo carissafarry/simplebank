@@ -22,4 +22,7 @@ migrateup:
 sqlc:
 	docker run --rm -v "D:/Projects/private/simplebank:/src" -w /src kjconroy/sqlc generate
 
+test:
+	go test -v -cover ./...
+
 .PHONY: rmpostgres postgres postgres-bash dropdb createdb migratedown migrateup sqlc
