@@ -19,6 +19,9 @@ migratedown:
 migrateup:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up
 
+startdb:
+	docker start postgres15
+
 sqlc:
 	docker run --rm -v "D:/Projects/private/simplebank:/src" -w /src kjconroy/sqlc generate
 
